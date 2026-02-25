@@ -1,0 +1,76 @@
+Symbol range map extraction starting
+Processing 3 files
+processing com\itelcan3\clovercape\MyCapeMod.java
+@|com\itelcan3\clovercape\MyCapeMod.java|8|31|com.itelcan3.clovercape|package|com.itelcan3.clovercape|(file)
+Class Start: com.itelcan3.clovercape.MyCapeMod
+   Method Start: init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
+      @|com\itelcan3\clovercape\MyCapeMod.java|386|390|init|method|com.itelcan3.clovercape.MyCapeMod|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
+      @|com\itelcan3\clovercape\MyCapeMod.java|391|413|FMLInitializationEvent|class|net.minecraftforge.fml.common.event.FMLInitializationEvent
+      @|com\itelcan3\clovercape\MyCapeMod.java|414|419|event|param|com.itelcan3.clovercape.MyCapeMod|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V|event|0
+      @|com\itelcan3\clovercape\MyCapeMod.java|495|511|FMLCommonHandler|class|net.minecraftforge.fml.common.FMLCommonHandler
+      @|com\itelcan3\clovercape\MyCapeMod.java|512|520|instance|method|net.minecraftforge.fml.common.FMLCommonHandler|instance|()Lnet/minecraftforge/fml/common/FMLCommonHandler;
+      @|com\itelcan3\clovercape\MyCapeMod.java|523|526|bus|method|net.minecraftforge.fml.common.FMLCommonHandler|bus|()Lnet/minecraftforge/fml/common/eventhandler/EventBus;
+      @|com\itelcan3\clovercape\MyCapeMod.java|529|537|register|method|net.minecraftforge.fml.common.eventhandler.EventBus|register|(Ljava/lang/Object;)V
+      @|com\itelcan3\clovercape\MyCapeMod.java|542|560|ClientEventHandler|class|com.itelcan3.clovercape.client.ClientEventHandler
+   Method End: init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
+Class End  : com.itelcan3.clovercape.MyCapeMod
+endProcessing com\itelcan3\clovercape\MyCapeMod.java
+
+processing com\itelcan3\clovercape\client\CapeHandler.java
+@|com\itelcan3\clovercape\client\CapeHandler.java|8|38|com.itelcan3.clovercape.client|package|com.itelcan3.clovercape.client|(file)
+Class Start: com.itelcan3.clovercape.client.CapeHandler
+   @|com\itelcan3\clovercape\client\CapeHandler.java|306|322|ResourceLocation|class|net.minecraft.util.ResourceLocation
+   @|com\itelcan3\clovercape\client\CapeHandler.java|323|330|MY_CAPE|field|com.itelcan3.clovercape.client.CapeHandler|MY_CAPE|
+   @|com\itelcan3\clovercape\client\CapeHandler.java|337|353|ResourceLocation|class|net.minecraft.util.ResourceLocation
+   @|com\itelcan3\clovercape\client\CapeHandler.java|488|494|String|class|java.lang.String
+   @|com\itelcan3\clovercape\client\CapeHandler.java|484|487|Set|class|java.util.Set
+   @|com\itelcan3\clovercape\client\CapeHandler.java|496|510|appliedPlayers|field|com.itelcan3.clovercape.client.CapeHandler|appliedPlayers|
+   @|com\itelcan3\clovercape\client\CapeHandler.java|517|524|HashSet|class|java.util.HashSet
+   @|com\itelcan3\clovercape\client\CapeHandler.java|525|531|String|class|java.lang.String
+   Method Start: addCapeToPlayer(Lnet/minecraft/client/entity/AbstractClientPlayer;)V
+      @|com\itelcan3\clovercape\client\CapeHandler.java|560|575|addCapeToPlayer|method|com.itelcan3.clovercape.client.CapeHandler|addCapeToPlayer|(Lnet/minecraft/client/entity/AbstractClientPlayer;)V
+      @|com\itelcan3\clovercape\client\CapeHandler.java|576|596|AbstractClientPlayer|class|net.minecraft.client.entity.AbstractClientPlayer
+      @|com\itelcan3\clovercape\client\CapeHandler.java|597|603|player|param|com.itelcan3.clovercape.client.CapeHandler|addCapeToPlayer|(Lnet/minecraft/client/entity/AbstractClientPlayer;)V|player|0
+      @|com\itelcan3\clovercape\client\CapeHandler.java|619|625|player|param|com.itelcan3.clovercape.client.CapeHandler|addCapeToPlayer|(Lnet/minecraft/client/entity/AbstractClientPlayer;)V|player|0
+      @|com\itelcan3\clovercape\client\CapeHandler.java|637|643|player|param|com.itelcan3.clovercape.client.CapeHandler|addCapeToPlayer|(Lnet/minecraft/client/entity/AbstractClientPlayer;)V|player|0
+      @|com\itelcan3\clovercape\client\CapeHandler.java|644|651|getName|method|net.minecraft.command.ICommandSender|getName|()Ljava/lang/String;
+      @|com\itelcan3\clovercape\client\CapeHandler.java|746|760|appliedPlayers|field|com.itelcan3.clovercape.client.CapeHandler|appliedPlayers
+      @|com\itelcan3\clovercape\client\CapeHandler.java|761|769|contains|method|java.util.Collection|contains|(Ljava/lang/Object;)Z
+      @|com\itelcan3\clovercape\client\CapeHandler.java|770|776|player|param|com.itelcan3.clovercape.client.CapeHandler|addCapeToPlayer|(Lnet/minecraft/client/entity/AbstractClientPlayer;)V|player|0
+      @|com\itelcan3\clovercape\client\CapeHandler.java|777|784|getName|method|net.minecraft.command.ICommandSender|getName|()Ljava/lang/String;
+      @|com\itelcan3\clovercape\client\CapeHandler.java|898|903|Field|class|java.lang.reflect.Field
+      @|com\itelcan3\clovercape\client\CapeHandler.java|916|936|AbstractClientPlayer|class|net.minecraft.client.entity.AbstractClientPlayer
+      @|com\itelcan3\clovercape\client\CapeHandler.java|943|959|getDeclaredField|method|java.lang.Class|getDeclaredField|(Ljava/lang/String;)Ljava/lang/reflect/Field;
+      @|com\itelcan3\clovercape\client\CapeHandler.java|1003|1016|setAccessible|method|java.lang.reflect.AccessibleObject|setAccessible|(Z)V
+      @|com\itelcan3\clovercape\client\CapeHandler.java|1050|1053|set|method|java.lang.reflect.Field|set|(Ljava/lang/Object;Ljava/lang/Object;)V
+      @|com\itelcan3\clovercape\client\CapeHandler.java|1054|1060|player|param|com.itelcan3.clovercape.client.CapeHandler|addCapeToPlayer|(Lnet/minecraft/client/entity/AbstractClientPlayer;)V|player|0
+      @|com\itelcan3\clovercape\client\CapeHandler.java|1062|1069|MY_CAPE|field|com.itelcan3.clovercape.client.CapeHandler|MY_CAPE
+      @|com\itelcan3\clovercape\client\CapeHandler.java|1093|1102|Exception|class|java.lang.Exception
+      @|com\itelcan3\clovercape\client\CapeHandler.java|1126|1141|printStackTrace|method|java.lang.Throwable|printStackTrace|()V
+      @|com\itelcan3\clovercape\client\CapeHandler.java|1171|1185|appliedPlayers|field|com.itelcan3.clovercape.client.CapeHandler|appliedPlayers
+      @|com\itelcan3\clovercape\client\CapeHandler.java|1186|1189|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|com\itelcan3\clovercape\client\CapeHandler.java|1190|1196|player|param|com.itelcan3.clovercape.client.CapeHandler|addCapeToPlayer|(Lnet/minecraft/client/entity/AbstractClientPlayer;)V|player|0
+      @|com\itelcan3\clovercape\client\CapeHandler.java|1197|1204|getName|method|net.minecraft.command.ICommandSender|getName|()Ljava/lang/String;
+   Method End: addCapeToPlayer(Lnet/minecraft/client/entity/AbstractClientPlayer;)V
+Class End  : com.itelcan3.clovercape.client.CapeHandler
+endProcessing com\itelcan3\clovercape\client\CapeHandler.java
+
+processing com\itelcan3\clovercape\client\ClientEventHandler.java
+@|com\itelcan3\clovercape\client\ClientEventHandler.java|8|38|com.itelcan3.clovercape.client|package|com.itelcan3.clovercape.client|(file)
+Class Start: com.itelcan3.clovercape.client.ClientEventHandler
+   Method Start: onRenderPlayer(Lnet/minecraftforge/client/event/RenderPlayerEvent$Pre;)V
+      @|com\itelcan3\clovercape\client\ClientEventHandler.java|364|378|onRenderPlayer|method|com.itelcan3.clovercape.client.ClientEventHandler|onRenderPlayer|(Lnet/minecraftforge/client/event/RenderPlayerEvent$Pre;)V
+      @|com\itelcan3\clovercape\client\ClientEventHandler.java|379|400|RenderPlayerEvent.Pre|class|net.minecraftforge.client.event.RenderPlayerEvent.Pre
+      @|com\itelcan3\clovercape\client\ClientEventHandler.java|401|406|event|param|com.itelcan3.clovercape.client.ClientEventHandler|onRenderPlayer|(Lnet/minecraftforge/client/event/RenderPlayerEvent$Pre;)V|event|0
+      @|com\itelcan3\clovercape\client\ClientEventHandler.java|422|427|event|param|com.itelcan3.clovercape.client.ClientEventHandler|onRenderPlayer|(Lnet/minecraftforge/client/event/RenderPlayerEvent$Pre;)V|event|0
+      @|com\itelcan3\clovercape\client\ClientEventHandler.java|428|440|entityPlayer|field|net.minecraftforge.event.entity.player.PlayerEvent|entityPlayer
+      @|com\itelcan3\clovercape\client\ClientEventHandler.java|452|472|AbstractClientPlayer|class|net.minecraft.client.entity.AbstractClientPlayer
+      @|com\itelcan3\clovercape\client\ClientEventHandler.java|488|499|CapeHandler|class|com.itelcan3.clovercape.client.CapeHandler
+      @|com\itelcan3\clovercape\client\ClientEventHandler.java|500|515|addCapeToPlayer|method|com.itelcan3.clovercape.client.CapeHandler|addCapeToPlayer|(Lnet/minecraft/client/entity/AbstractClientPlayer;)V
+      @|com\itelcan3\clovercape\client\ClientEventHandler.java|517|537|AbstractClientPlayer|class|net.minecraft.client.entity.AbstractClientPlayer
+      @|com\itelcan3\clovercape\client\ClientEventHandler.java|539|544|event|param|com.itelcan3.clovercape.client.ClientEventHandler|onRenderPlayer|(Lnet/minecraftforge/client/event/RenderPlayerEvent$Pre;)V|event|0
+      @|com\itelcan3\clovercape\client\ClientEventHandler.java|545|557|entityPlayer|field|net.minecraftforge.event.entity.player.PlayerEvent|entityPlayer
+   Method End: onRenderPlayer(Lnet/minecraftforge/client/event/RenderPlayerEvent$Pre;)V
+Class End  : com.itelcan3.clovercape.client.ClientEventHandler
+endProcessing com\itelcan3\clovercape\client\ClientEventHandler.java
+
