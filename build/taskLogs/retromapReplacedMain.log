@@ -33390,6 +33390,7 @@ RENAME MAP: param net/minecraft/world/storage/WorldInfo/WorldInfo (Lnet/minecraf
 Start Processing: com\itelcan3\clovercape\MyCapeMod.java
 [method, com/itelcan3/clovercape/MyCapeMod/init, (Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V]
 No rename for class net/minecraftforge/fml/common/event/FMLInitializationEvent
+[method, com/itelcan3/clovercape/client/CapeHandler/initFolder, ()V]
 No rename for class net/minecraftforge/fml/common/FMLCommonHandler
 [method, net/minecraftforge/fml/common/FMLCommonHandler/instance, ()Lnet/minecraftforge/fml/common/FMLCommonHandler;]
 No rename for method net/minecraftforge/fml/common/FMLCommonHandler/instance ()Lnet/minecraftforge/fml/common/FMLCommonHandler;
@@ -33402,35 +33403,62 @@ End  Processing: com\itelcan3\clovercape\MyCapeMod.java
 
 Start Processing: com\itelcan3\clovercape\client\CapeHandler.java
 Warning: com\itelcan3\clovercape\client\CapeHandler.java has CRLF line endings; consider switching to LF
-Rename class net/minecraft/util/ResourceLocation[306,322]::ResourceLocation->ResourceLocation
-Rename class net/minecraft/util/ResourceLocation[337,353]::ResourceLocation->ResourceLocation
-[method, com/itelcan3/clovercape/client/CapeHandler/addCapeToPlayer, (Lnet/minecraft/client/entity/AbstractClientPlayer;)V]
-Rename class net/minecraft/client/entity/AbstractClientPlayer[576,596]::AbstractClientPlayer->AbstractClientPlayer
-Rename method net/minecraft/command/ICommandSender/getName ()Ljava/lang/String;[644,651]::getName->func_70005_c_
-[method, java/util/Collection/contains, (Ljava/lang/Object;)Z]
-Rename method net/minecraft/command/ICommandSender/getName ()Ljava/lang/String;[783,790]::getName->func_70005_c_
-Rename class net/minecraft/client/entity/AbstractClientPlayer[928,948]::AbstractClientPlayer->AbstractClientPlayer
+Rename class net/minecraft/util/ResourceLocation[405,421]::ResourceLocation->ResourceLocation
+Rename class net/minecraft/util/ResourceLocation[437,453]::ResourceLocation->ResourceLocation
+[method, com/itelcan3/clovercape/client/CapeHandler/initFolder, ()V]
+Rename class net/minecraft/client/Minecraft[627,636]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[637,649]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/mcDataDir[652,661]::mcDataDir->field_71412_D
+[method, java/io/File/exists, ()Z]
+[method, java/io/File/mkdirs, ()Z]
+[method, com/itelcan3/clovercape/client/CapeHandler/apply, ()V]
+Rename class net/minecraft/client/Minecraft[877,886]::Minecraft->Minecraft
+Rename class net/minecraft/client/Minecraft[892,901]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[902,914]::getMinecraft->func_71410_x
+Rename field net/minecraft/client/Minecraft/thePlayer[933,942]::thePlayer->field_71439_g
+Rename method net/minecraft/client/Minecraft/getNetHandler ()Lnet/minecraft/client/network/NetHandlerPlayClient;[961,974]::getNetHandler->func_147114_u
+Rename class net/minecraft/client/entity/AbstractClientPlayer[1003,1023]::AbstractClientPlayer->AbstractClientPlayer
+Rename field net/minecraft/client/Minecraft/thePlayer[1036,1045]::thePlayer->field_71439_g
+Rename class net/minecraft/client/network/NetworkPlayerInfo[1059,1076]::NetworkPlayerInfo->NetworkPlayerInfo
+Rename method net/minecraft/client/Minecraft/getNetHandler ()Lnet/minecraft/client/network/NetHandlerPlayClient;[1087,1100]::getNetHandler->func_147114_u
+Rename method net/minecraft/client/network/NetHandlerPlayClient/getPlayerInfo (Ljava/util/UUID;)Lnet/minecraft/client/network/NetworkPlayerInfo;[1103,1116]::getPlayerInfo->func_175102_a
+Rename method net/minecraft/entity/Entity/getUniqueID ()Ljava/util/UUID;[1124,1135]::getUniqueID->func_110124_au
+[method, java/io/File/exists, ()Z]
+[method, com/itelcan3/clovercape/client/CapeHandler/loadCapeFromFile, ()V]
+Rename class net/minecraft/client/network/NetworkPlayerInfo[1543,1560]::NetworkPlayerInfo->NetworkPlayerInfo
 [method, java/lang/Class/getDeclaredField, (Ljava/lang/String;)Ljava/lang/reflect/Field;]
 [method, java/lang/reflect/AccessibleObject/setAccessible, (Z)V]
 [method, java/lang/reflect/Field/set, (Ljava/lang/Object;Ljava/lang/Object;)V]
-[method, java/lang/Throwable/printStackTrace, ()V]
-[method, java/util/Collection/add, (Ljava/lang/Object;)Z]
-Rename method net/minecraft/command/ICommandSender/getName ()Ljava/lang/String;[1209,1216]::getName->func_70005_c_
+Rename class net/minecraft/client/network/NetworkPlayerInfo[1901,1918]::NetworkPlayerInfo->NetworkPlayerInfo
+[method, java/lang/Class/getDeclaredField, (Ljava/lang/String;)Ljava/lang/reflect/Field;]
+[method, java/lang/reflect/AccessibleObject/setAccessible, (Z)V]
+[method, java/lang/reflect/Field/set, (Ljava/lang/Object;Ljava/lang/Object;)V]
+[method, java/io/PrintStream/println, (Ljava/lang/String;)V]
+[method, java/lang/Throwable/getMessage, ()Ljava/lang/String;]
+[method, com/itelcan3/clovercape/client/CapeHandler/loadCapeFromFile, ()V]
+Rename class net/minecraft/client/renderer/ThreadDownloadImageData[2334,2357]::ThreadDownloadImageData->ThreadDownloadImageData
+Rename class net/minecraft/client/renderer/ThreadDownloadImageData[2376,2399]::ThreadDownloadImageData->ThreadDownloadImageData
+Rename class net/minecraft/client/Minecraft[2437,2446]::Minecraft->Minecraft
+Rename method net/minecraft/client/Minecraft/getMinecraft ()Lnet/minecraft/client/Minecraft;[2447,2459]::getMinecraft->func_71410_x
+Rename method net/minecraft/client/Minecraft/getTextureManager ()Lnet/minecraft/client/renderer/texture/TextureManager;[2462,2479]::getTextureManager->func_110434_K
+Rename method net/minecraft/client/renderer/texture/TextureManager/loadTexture (Lnet/minecraft/util/ResourceLocation;Lnet/minecraft/client/renderer/texture/ITextureObject;)Z[2478,2489]::loadTexture->func_110579_a
+[method, java/io/PrintStream/println, (Ljava/lang/String;)V]
+Import: net.minecraft.client.Minecraft
 Import: net.minecraft.client.entity.AbstractClientPlayer
+Import: net.minecraft.client.network.NetworkPlayerInfo
+Import: net.minecraft.client.renderer.ThreadDownloadImageData
 Import: net.minecraft.util.ResourceLocation
 Adding 0 imports
 End  Processing: com\itelcan3\clovercape\client\CapeHandler.java
 
 Start Processing: com\itelcan3\clovercape\client\ClientEventHandler.java
 Warning: com\itelcan3\clovercape\client\ClientEventHandler.java has CRLF line endings; consider switching to LF
-[method, com/itelcan3/clovercape/client/ClientEventHandler/onRenderPlayer, (Lnet/minecraftforge/client/event/RenderPlayerEvent$Pre;)V]
-No rename for class net/minecraftforge/client/event/RenderPlayerEvent/Pre
-No rename for field net/minecraftforge/event/entity/player/PlayerEvent/entityPlayer
-Rename class net/minecraft/client/entity/AbstractClientPlayer[452,472]::AbstractClientPlayer->AbstractClientPlayer
-[method, com/itelcan3/clovercape/client/CapeHandler/addCapeToPlayer, (Lnet/minecraft/client/entity/AbstractClientPlayer;)V]
-Rename class net/minecraft/client/entity/AbstractClientPlayer[517,537]::AbstractClientPlayer->AbstractClientPlayer
-No rename for field net/minecraftforge/event/entity/player/PlayerEvent/entityPlayer
-Import: net.minecraft.client.entity.AbstractClientPlayer
+[method, com/itelcan3/clovercape/client/ClientEventHandler/onClientTick, (Lnet/minecraftforge/fml/common/gameevent/TickEvent$ClientTickEvent;)V]
+No rename for class net/minecraftforge/fml/common/gameevent/TickEvent/ClientTickEvent
+No rename for field net/minecraftforge/fml/common/gameevent/TickEvent/phase
+No rename for class net/minecraftforge/fml/common/gameevent/TickEvent/Phase
+No rename for field net/minecraftforge/fml/common/gameevent/TickEvent/Phase/END
+[method, com/itelcan3/clovercape/client/CapeHandler/apply, ()V]
 Adding 0 imports
 End  Processing: com\itelcan3\clovercape\client\ClientEventHandler.java
 

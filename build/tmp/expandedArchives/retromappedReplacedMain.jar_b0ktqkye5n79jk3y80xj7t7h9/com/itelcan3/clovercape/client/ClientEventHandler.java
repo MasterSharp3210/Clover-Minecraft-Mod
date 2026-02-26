@@ -1,16 +1,15 @@
 package com.itelcan3.clovercape.client;
 
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.client.event.RenderPlayerEvent;
-import net.minecraft.client.entity.AbstractClientPlayer;
+import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 public class ClientEventHandler {
 
-    // Questo evento viene chiamato prima di renderizzare ogni player
     @SubscribeEvent
-    public void onRenderPlayer(RenderPlayerEvent.Pre event) {
-        if (event.entityPlayer instanceof AbstractClientPlayer) {
-            CapeHandler.addCapeToPlayer((AbstractClientPlayer) event.entityPlayer);
+    public void onClientTick(TickEvent.ClientTickEvent event) {
+        // Applichiamo il mantello alla fine di ogni tick del client
+        if (event.phase == TickEvent.Phase.END) {
+            CapeHandler.apply();
         }
     }
 }

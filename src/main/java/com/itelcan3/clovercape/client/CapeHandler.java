@@ -1,34 +1,62 @@
 package com.itelcan3.clovercape.client;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.AbstractClientPlayer;
+import net.minecraft.client.network.NetworkPlayerInfo;
+import net.minecraft.client.renderer.ThreadDownloadImageData;
 import net.minecraft.util.ResourceLocation;
-
+import java.io.File;
 import java.lang.reflect.Field;
-import java.util.HashSet;
-import java.util.Set;
 
 public class CapeHandler {
 
-    // Il cape della tua mod
-    private static final ResourceLocation MY_CAPE = new ResourceLocation("clovercape", "textures/cape.png");
+    private static final ResourceLocation CAPE_RES = new ResourceLocation("clovercape/custom_cape");
+    private static boolean isTextureLoaded = false;
+    private static File capeFile;
 
-    // Tiene traccia dei player a cui abbiamo già applicato il cape
-    private static final Set<String> appliedPlayers = new HashSet<String>();
+    public static void initFolder() {
+        File mcDir = Minecraft.getMinecraft().mcDataDir;
+        File configDir = new File(mcDir, ".clovercape");
+        if (!configDir.exists()) configDir.mkdirs();
+        capeFile = new File(configDir, "cape.png");
+    }
 
-    public static void addCapeToPlayer(AbstractClientPlayer player) {
-        if (player == null || player.getName() == null) return;
+    public static void apply() {
+        Minecraft mc = Minecraft.getMinecraft();
+        if (mc.thePlayer == null || mc.getNetHandler() == null) return;
 
-        // Applica il cape solo se non è già stato applicato
-        if (!appliedPlayers.contains(player.getName())) {
-            try {
-                // Reflection per accedere al campo privato locationCape
-                Field capeField = AbstractClientPlayer.class.getDeclaredField("locationCape");
-                capeField.setAccessible(true);
-                capeField.set(player, MY_CAPE);
-            } catch (Exception e) {
-                e.printStackTrace();
+        AbstractClientPlayer player = mc.thePlayer;
+        NetworkPlayerInfo info = mc.getNetHandler().getPlayerInfo(player.getUniqueID());
+        
+        if (info != null && capeFile.exists()) {
+            if (!isTextureLoaded) {
+                loadCapeFromFile();
+                isTextureLoaded = true;
             }
-            appliedPlayers.add(player.getName());
+
+            try {
+                // Usiamo il campo che abbiamo visto nel tuo log: field_178862_f
+                // Questo campo imposta direttamente la ResourceLocation del mantello
+                Field fCape = NetworkPlayerInfo.class.getDeclaredField("field_178862_f");
+                fCape.setAccessible(true);
+                fCape.set(info, CAPE_RES);
+                
+            } catch (NoSuchFieldException e) {
+                // Se per caso cambia nome (es. in ambiente dev), proviamo il nome umano
+                try {
+                    Field fCapeDev = NetworkPlayerInfo.class.getDeclaredField("locationCape");
+                    fCapeDev.setAccessible(true);
+                    fCapeDev.set(info, CAPE_RES);
+                } catch (Exception ignored) {}
+            } catch (Exception e) {
+                System.out.println("CloverCape > En error occured during loading Cape: " + e.getMessage());
+            }
         }
+    }
+
+    private static void loadCapeFromFile() {
+        ThreadDownloadImageData textureData = new ThreadDownloadImageData(capeFile, null, null, null);
+        Minecraft.getMinecraft().getTextureManager().loadTexture(CAPE_RES, textureData);
+        System.out.println("CloverCape > Cape Loaded successful");
     }
 }

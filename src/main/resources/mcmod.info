@@ -1,13 +1,13 @@
 [
 {
   "modid": "clovercape",
-  "name": "Clover Cape",
-  "description": "A mod to have the Clover Cape.",
+  "name": "CloverCape",
+  "description": "CloverCape Mod",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["MasterSharp3210, Itelcan3"],
+  "authorList": ["Itelcan3"],
   "credits": "The Forge and FML guys, for making this example",
   "logoFile": "",
   "screenshots": [],
